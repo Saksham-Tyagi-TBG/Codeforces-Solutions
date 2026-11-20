@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Type Aliases
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using vi = vector<int>;
+using vll = vector<ll>;
+
+// Shortcuts
+#define pb push_back
+#define eb emplace_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) ((int)(x).size())
+
+// Loop Macros
+#define rep(i, a, b) for (int i = (a); i < (b); i++)
+#define per(i, a, b) for (int i = (a); i >= (b); i--)
+
+// Output Shortcuts
+#define YES cout << "YES\n"
+#define NO cout << "NO\n"
+
+// Constants
+const ll MOD = 1000000007LL;
+const ll INF = 1e18;
+const double PI = acos(-1.0);
+
+void solve() {
+    int x1, y1;
+    cin >> x1 >> y1;
+    int x2, y2;
+    cin >> x2 >> y2;
+    if (x1 != x2 && y1 != y2) {
+        cout << 4 + 2 * (abs(x2 - x1) + abs(y2 - y1));
+    } else if (x1 == x2) {
+        cout << 6 + 2 * abs(y2 - y1);
+    } else {
+        cout << 6 + 2 * abs(x2 - x1);
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t = 1;
+    // cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
